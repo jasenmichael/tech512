@@ -4,17 +4,14 @@
 
 ```bash
 # install dependencies
-$ npm install
+git clone 
+npm install
 
 # serve with hot reload at localhost:3000
 $ npm run dev
 
-# build for production and launch server
-$ npm run build
-$ npm run start
 
-# generate static project
-$ npm run generate
 ```
+open [localhost:3000](localhost:3000) to see the site.
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+open [localhost:3000/_tailwind](localhost:3000/_tailwind) to see theme colors configured in the tailwind.config.js
