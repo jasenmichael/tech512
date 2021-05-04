@@ -12,14 +12,14 @@ module.exports = {
     extend: {
       colors: {
         brand: '#16a085', // seagreen-400
-        primaryLight: '',
-        secondaryLight: '',
-        primaryDark: '',
-        secondaryDark: '',
-        primaryLightTxt: '',
-        secondaryLightTxt: '',
-        primaryDarkTxt: '',
-        secondaryDarkTxt: '',
+        // primaryLight: '',
+        // secondaryLight: '',
+        // primaryDark: '',
+        // secondaryDark: '',
+        // primaryLightTxt: '',
+        // secondaryLightTxt: '',
+        // primaryDarkTxt: '',
+        // secondaryDarkTxt: '',
         seagreen: {
           50: '#edf5f3',
           100: '#cbf0f0',
