@@ -1,7 +1,40 @@
 # COMPONENTS
 
-**This directory is not required, you can delete it if you don't want to use it.**
+### components/
 
-The components directory contains your Vue.js Components.
+---
 
-_Nuxt.js doesn't supercharge these components._
+###### layouts:
+
+**Navbar/**
+
+- [ ] index.js
+- [ ] index.stories.js
+
+**Footer/**
+
+- [ ] index.js
+- [ ] index.stories.js
+
+---
+
+global:
+**./compnents/hero/**
+
+- [ ] index.js
+- [ ] index.stories.js
+
+**./compnents/link/**
+
+- [ ] index.js
+- [ ] index.stories.js
+
+**./compnents/button/**
+
+- [ ] index.js
+- [ ] index.stories.js
+
+**./compnents/image/**
+
+- [ ] index.js
+- [ ] index.stories.js

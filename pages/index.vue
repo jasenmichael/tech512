@@ -1,26 +1,44 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">tech512</h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+  <div>
+    <Hero />
+
+    <!-- services -->
+    <div
+      class="
+        bg-backgroundLight
+        text-secondaryDark
+        font-sans
+        text-right
+        h-60
+        px-8
+        text-9xl
+      "
+    >
+      SERVICES
+    </div>
+    <!-- colors -->
+    <div class="py-4 border-t border-b border-accent">
+      <div class="h-10 bg-primaryLight"></div>
+      <div class="h-10 bg-primary"></div>
+      <div class="h-10 bg-primaryDark"></div>
+      <div class="h-10 bg-secondaryLight"></div>
+      <div class="h-10 bg-secondary"></div>
+      <div class="h-10 bg-secondaryDark"></div>
+      <div class="h-10 bg-accentLight"></div>
+      <div class="h-10 bg-accent"></div>
+      <div class="h-10 bg-accentDark"></div>
+      <div class="h-10 bg-backgroundLight"></div>
+      <div class="h-10 bg-background"></div>
+      <div class="h-10 bg-backgroundDark"></div>
+      <div class="h-5 bg-successLight"></div>
+      <div class="h-5 bg-success"></div>
+      <div class="h-5 bg-successDark"></div>
+      <div class="h-5 bg-warningLight"></div>
+      <div class="h-5 bg-warning"></div>
+      <div class="h-5 bg-warningDark"></div>
+      <div class="h-5 bg-dangerLight"></div>
+      <div class="h-5 bg-danger"></div>
+      <div class="h-5 bg-dangerDark"></div>
     </div>
   </div>
 </template>
@@ -28,41 +46,3 @@
 <script>
 export default {}
 </script>
-
-<style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-@apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
