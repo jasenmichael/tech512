@@ -63,7 +63,7 @@
             h-22
             opacity-50
             items-center
-            bottom-0
+            top-0
             mb-10
             text-4xl
             transition-all
