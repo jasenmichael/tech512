@@ -11,6 +11,10 @@ module.exports = {
   darkMode: 'media', // or 'media' or 'class'
   theme: {
     extend: {
+      fontSize: {
+        huge: '160%',
+        massive: '180%',
+      },
       colors: require('./colors.js'),
       animation: {
         spin: 'spin 2s linear infinite',

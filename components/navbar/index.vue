@@ -1,24 +1,19 @@
 <template>
-  <div class="bg-black">
+  <div
+    class="bg-black transition duration-500 ease-in-out z-50"
+    :class="scrollY ? 'opacity-100' : 'opacity-0'"
+  >
     <!-- empty bar -->
     <div
-      class="
-        bg-secondary
-        text-primary
-        z-30
-        h-10
-        shadow
-        transition
-        duration-500
-        ease-in-out
-      "
+      class="bg-secondary z-30 h-10 shadow"
       :class="scrollY ? 'opacity-50' : 'opacity-0'"
-    ></div>
+    >
+      yo
+    </div>
     <!-- brand logo link -->
     <div
       class="
-        bg-secondaryDark
-        opacity-980
+        bg-accent-600
         w-auto
         absolute
         border border-primary
@@ -32,7 +27,7 @@
         text-onPrimary
         font-black
         text-xl
-        rounded-2xl
+        rounded-1xl
       "
     >
       TECH 512
