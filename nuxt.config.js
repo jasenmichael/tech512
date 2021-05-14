@@ -12,7 +12,7 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['assets/style.css'],
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -32,7 +32,24 @@ export default {
     // '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    //  https://google-fonts.nuxtjs.org
+    '@nuxtjs/google-fonts',
   ],
+  googleFonts: {
+    families: {
+      Roboto: true,
+      Rubik: true,
+      Lato: [100, 300],
+      Raleway: {
+        wght: [100, 400],
+        ital: [100],
+      },
+      'Montserrat Alternates': {
+        ital: [500, 600, 700, 800],
+        wght: [500, 600, 700, 800],
+      },
+    },
+  },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   // axios: {},
   // PWA module configuration: https://go.nuxtjs.dev/pwa

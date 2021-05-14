@@ -22,6 +22,11 @@ module.exports = {
         height: 'height',
         spacing: 'margin, padding',
       },
+      fontFamily: {
+        primary: ['Rubik', 'sans-serif'],
+        secondary: ['Rubik', 'sans-serif'],
+        accent: ['Rubik', 'sans-serif'],
+      },
     },
   },
   variants: {

@@ -1,13 +1,14 @@
 <template>
   <!-- page wrapper -->
-  <div class="flex flex-col min-h-screen bg-background-900 text-onBackground">
+  <div>
     <!-- navbar -->
-    <div class="bg-secondary text-primary">navbar</div>
+    <div class="flex flex-col min-h-screen bg-background-900 text-onBackground">
+      <!-- page content -->
+      <Navbar class="sticky top-0 z-50" />
+      <Nuxt class="flex-grow" />
 
-    <!-- page content -->
-    <Nuxt class="flex-grow" />
-
-    <!-- footer -->
-    <div class="h-40 bg-primary text-onPrimary">footer</div>
+      <!-- footer -->
+      <div class="h-40 bg-primary text-onPrimary">footer</div>
+    </div>
   </div>
 </template>
