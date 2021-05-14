@@ -1,7 +1,7 @@
 <template>
   <div
-    class="bg-black transition duration-500 ease-in-out z-50"
-    :class="scrollY ? 'opacity-100' : 'opacity-0'"
+    class="transition duration-500 ease-in-out z-50"
+    :class="scrollY ? 'opacity-100 bg-black' : 'opacity-0 bg-transparent'"
   >
     <!-- empty bar -->
     <div
