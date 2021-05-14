@@ -11,7 +11,9 @@
         </div>
         <div>
           <div class="relative flex flex-col h-screen my-auto pt-40">
+            <!-- tech -->
             <div class="hero-bg-text -mb-11">TECH</div>
+            <!-- hero heading -->
             <div
               class="
                 ml-10
@@ -29,8 +31,9 @@
               <br />
               web sites.
             </div>
-            <div></div>
+            <!-- 512 -->
             <div class="hero-bg-text -mt-12">512</div>
+            <!-- hero sub-heading -->
             <div class="text-3xl ml-10">
               We engage and drive traffic to meet your true potential.
             </div>

@@ -4,6 +4,7 @@
     <Intro />
     <Services />
     <CtaHomeOne />
+    <!-- team -->
     <CtaHomeTwo />
 
     <!-- dev sections -->
