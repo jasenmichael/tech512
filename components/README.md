@@ -19,22 +19,52 @@
 ---
 
 global:
-**./compnents/hero/**
-
-- [ ] index.js
-- [ ] index.stories.js
 
 **./compnents/link/**
 
-- [ ] index.js
+- [ ] index.vue
 - [ ] index.stories.js
 
 **./compnents/button/**
 
-- [ ] index.js
+- [ ] index.vue
 - [ ] index.stories.js
 
 **./compnents/image/**
 
-- [ ] index.js
+- [ ] index.vue
+- [ ] index.stories.js
+
+landing page:
+
+**./compnents/hero/**
+
+- [ ] index.vue
+- [ ] index.stories.js
+
+**./compnents/intro/**
+
+- [ ] index.vue
+- [ ] index.stories.js
+
+**./compnents/services/**
+
+- [ ] index.vue
+- [ ] index.stories.js
+
+**./compnents/cta/**
+
+- [ ] HomeOne.js // use with <CtaHomeOne />
+- [ ] HomeOne.stories.js
+- [ ] HomeTwo.js // use with <CtaHomeTwo />
+- [ ] HomeTwo.stories.js
+
+**./compnents/designs/**
+
+- [ ] index.vue
+- [ ] index.stories.js
+
+**./compnents/team/**
+
+- [ ] index.vue
 - [ ] index.stories.js

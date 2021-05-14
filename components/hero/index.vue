@@ -1,22 +1,40 @@
 <template>
   <div class="h-screen flex flex-col">
     <div class="relative text-onBackgroundDark text-9xl font-black">
-      <div class="block absolute inset-y-0 w-full">
+      <div class="block absolute w-full">
         <div class="relative">
           <img
             class="absolute w-screen h-screen object-cover"
-            src="sample2.jpg"
+            src="sample5.jpg"
             alt=""
           />
           <!-- bg image(s) -->
         </div>
-        <div class="max-w-2xl pt-10 pl-10">
-          <div class="relative flex flex-col h-screen">
-            <div class="opacity-20 -mb-12 ml-6 mr-10">TECH</div>
-            <div class="opacity-70 text-secondaryLight text-7xl">
-              ARE YOU READY FOR AN ONLINE PRESENCE?
+        <div>
+          <div class="relative flex flex-col h-screen my-auto pt-40">
+            <div class="hero-bg-text -mb-11">TECH</div>
+            <div
+              class="
+                ml-10
+                opacity-90
+                shadow-inner
+                drop-shadow
+                text-primary-200 text-6xl
+                z-10
+              "
+            >
+              Blazing
+              <span class="italic text-accent-700 opacity-95">FAST</span>
+              <br />
+              search optmized
+              <br />
+              web sites.
             </div>
-            <div class="opacity-20 -mt-12 ml-6">512</div>
+            <div></div>
+            <div class="hero-bg-text -mt-8 ml-12">512</div>
+            <div class="text-3xl ml-10">
+              We engage and drive traffic to meet your true potential.
+            </div>
           </div>
         </div>
       </div>
@@ -27,3 +45,9 @@
 <script>
 export default {}
 </script>
+
+<style>
+.hero-bg-text {
+  @apply text-transparent shadow-inner drop-shadow shadow opacity-95 bg-clip-text bg-gradient-to-tr from-secondaryDark to-primary;
+}
+</style>
