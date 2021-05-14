@@ -5,15 +5,23 @@
   >
     <!-- empty bar -->
     <div
-      class="bg-secondary z-30 h-10 shadow"
+      class="
+        text-transparent
+        bg-transparent
+        z-30
+        h-10
+        shadow
+        bg-clip-content bg-gradient-to-r
+        from-secondary
+        via-secondary
+        to-primary
+      "
       :class="scrollY ? 'opacity-50' : 'opacity-0'"
-    >
-      yo
-    </div>
+    ></div>
     <!-- brand logo link -->
     <div
       class="
-        bg-accent-600
+        bg-primary
         w-auto
         absolute
         border border-primary
@@ -21,16 +29,42 @@
         flex
         items-center
         left-10
-        px-4
+        px-6
         -mt-6
         shawow-lg
-        text-onPrimary
+        text-accent-400
         font-black
-        text-xl
-        rounded-1xl
+        text-2xl
+        font-accent
+        rounded-sm
       "
     >
       TECH 512
+    </div>
+    <!-- floating hamburger -->
+    <div
+      class="
+        z-50
+        bg-accent-600
+        text-onAccent
+        w-12
+        h-12
+        text-center
+        absolute
+        border border-secondary
+        flex flex-col
+        items-center
+        right-10
+        -mt-6
+        shawow-lg
+        rounded-full
+        font-black
+        text-xl
+      "
+    >
+      <span class="leading-none text-2xl font-black -mt-1">_</span>
+      <span class="leading-none text-2xl font-black -mt-4">_</span>
+      <span class="leading-none text-2xl font-black -mt-4">_</span>
     </div>
   </div>
 </template>

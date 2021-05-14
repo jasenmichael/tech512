@@ -12,6 +12,7 @@
         <!-- overlay -->
         <div
           class="
+            h-screen
             absolute
             top-0
             right-0
