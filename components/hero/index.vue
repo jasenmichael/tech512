@@ -8,7 +8,6 @@
             src="sample5.jpg"
             alt=""
           />
-          <!-- bg image(s) -->
         </div>
         <div>
           <div class="relative flex flex-col h-screen my-auto pt-40">
@@ -19,7 +18,7 @@
                 opacity-90
                 shadow-inner
                 drop-shadow
-                text-primary-200 text-6xl
+                text-primary-200 text-9xl
                 z-10
               "
             >
@@ -31,7 +30,7 @@
               web sites.
             </div>
             <div></div>
-            <div class="hero-bg-text -mt-8 ml-12">512</div>
+            <div class="hero-bg-text -mt-12">512</div>
             <div class="text-3xl ml-10">
               We engage and drive traffic to meet your true potential.
             </div>
@@ -48,6 +47,6 @@ export default {}
 
 <style>
 .hero-bg-text {
-  @apply text-transparent shadow-inner drop-shadow shadow opacity-95 bg-clip-text bg-gradient-to-tr from-secondaryDark to-primary;
+  @apply text-transparent font-bold shadow-inner drop-shadow shadow opacity-95 bg-clip-text bg-gradient-to-tr from-secondaryDark to-primary;
 }
 </style>
