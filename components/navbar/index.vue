@@ -1,6 +1,6 @@
 <template>
   <div
-    class="transition duration-500 ease-in-out z-50"
+    class="transition-all duration-700 ease-out z-50"
     :class="scrollY ? 'opacity-100 bg-black' : 'opacity-0 bg-transparent'"
   >
     <!-- empty bar -->
@@ -19,27 +19,28 @@
       :class="scrollY ? 'opacity-50' : 'opacity-0'"
     ></div>
     <!-- brand logo link -->
+    <!-- border border-primary -->
+    <!-- text-accent-400 -->
+    <!-- bg-primary -->
+    <!-- px-6 -->
     <div
       class="
-        bg-primary
         w-auto
         absolute
-        border border-primary
         h-10
         flex
         items-center
         left-10
-        px-6
-        -mt-6
+        -mt-2
         shawow-lg
-        text-accent-400
         font-black
         text-2xl
         font-accent
-        rounded-sm
+        opacity-100
       "
     >
-      TECH 512
+      <!-- TECH 512 -->
+      <img src="logo1.png" class="h-20 w-auto rounded-md" alt="" />
     </div>
     <!-- floating hamburger -->
     <div

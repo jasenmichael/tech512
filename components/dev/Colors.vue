@@ -1,15 +1,33 @@
 <template>
   <div>
-    <div class="py-4 border-t border-b border-accent">
-      <div class="h-10 bg-primaryLight"></div>
-      <div class="h-10 bg-primary"></div>
-      <div class="h-10 bg-primaryDark"></div>
-      <div class="h-10 bg-secondaryLight"></div>
-      <div class="h-10 bg-secondary"></div>
-      <div class="h-10 bg-secondaryDark"></div>
-      <div class="h-10 bg-accentLight"></div>
-      <div class="h-10 bg-accent"></div>
-      <div class="h-10 bg-accentDark"></div>
+    <div>
+      <div class="h-10 bg-primaryLight">
+        {{ $config.colors.primaryLight.DEFAULT }}
+      </div>
+      <div class="h-10 bg-primary text-onPrimary">
+        {{ $config.colors.primary.DEFAULT }}
+      </div>
+      <div class="h-10 bg-primaryDark text-onPrimaryDark">
+        {{ $config.colors.primaryDark.DEFAULT }}
+      </div>
+      <div class="h-10 bg-secondaryLight">
+        {{ $config.colors.secondaryLight.DEFAULT }}
+      </div>
+      <div class="h-10 bg-secondary">
+        {{ $config.colors.secondary.DEFAULT }}
+      </div>
+      <div class="h-10 bg-secondaryDark">
+        {{ $config.colors.secondaryDark.DEFAULT }}
+      </div>
+      <div class="h-10 bg-accentLight">
+        {{ $config.colors.accentLight.DEFAULT }}
+      </div>
+      <div class="h-10 bg-accent">
+        {{ $config.colors.accent.DEFAULT }}
+      </div>
+      <div class="h-10 bg-accentDark">
+        {{ $config.colors.accentDark.DEFAULT }}
+      </div>
       <div class="h-10 bg-backgroundLight"></div>
       <div class="h-10 bg-background"></div>
       <div class="h-10 bg-backgroundDark"></div>

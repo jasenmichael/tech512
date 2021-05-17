@@ -38,7 +38,7 @@
                 z-10
               "
             >
-              Blazing
+              Lightning
               <span class="italic text-accent-600">FAST</span>
               <br />
               search optmized
@@ -73,8 +73,14 @@
           :class="scrollY ? 'opacity-0' : 'opacity-100'"
         >
           <hr
-            class="border-accent-600 transform transition-all duration-1000"
-            :class="loaded ? '-translate-x-0' : '-translate-x-full'"
+            class="
+              mt-2
+              border-accent-600
+              transform
+              transition-all
+              duration-1000
+            "
+            :class="loaded && !scrollY ? '-translate-x-0' : '-translate-x-full'"
           />
           <div
             class="
@@ -96,7 +102,7 @@
           </div>
           <hr
             class="border-accent-600 transform transition-all duration-1000"
-            :class="loaded ? 'translate-x-0' : 'translate-x-full'"
+            :class="loaded && !scrollY ? 'translate-x-0' : 'translate-x-full'"
           />
         </div>
       </div>
@@ -143,6 +149,6 @@ export default {
   @apply text-transparent text-huge font-bold shadow-inner drop-shadow shadow opacity-80 bg-clip-text bg-gradient-to-br from-secondary via-secondaryDark to-primaryDark;
 }
 .hero-nav {
-  @apply border-accent-800 border-l border-r text-accent-400 p-6 mt-px;
+  @apply border-accent-800 border-l border-r text-accent-400 p-6 mt-px transition-all duration-1000 ease-linear;
 }
 </style>
