@@ -34,6 +34,8 @@ export default {
     '@nuxtjs/pwa',
     //  https://google-fonts.nuxtjs.org
     '@nuxtjs/google-fonts',
+    // https://www.npmjs.com/package/vue-scrollto
+    'vue-scrollto/nuxt',
   ],
   googleFonts: {
     families: {

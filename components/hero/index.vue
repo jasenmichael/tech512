@@ -24,7 +24,7 @@
           "
         ></div>
         <!-- hero content -->
-        <div class="flex flex-row items-center pt-10">
+        <div class="flex flex-row items-center pt-10 transition-all z-50">
           <div class="relative flex flex-col h-screen pt-20 ml-6">
             <!-- tech -->
             <div class="hero-bg-text -mb-20">TECH</div>
@@ -36,6 +36,7 @@
                 drop-shadow
                 text-primary-100 text-9xl
                 z-10
+                leading-none
               "
             >
               Lightning
@@ -69,6 +70,7 @@
             transition-all
             ease-in-out
             duration-700
+            z-50
           "
           :class="scrollY ? 'opacity-0' : 'opacity-100'"
         >
@@ -92,7 +94,7 @@
               duration-1000
               ease-linear
             "
-            :class="loaded ? 'opacity-100' : 'opacity-0'"
+            :class="loaded && !scrollY ? 'opacity-100' : 'opacity-0'"
           >
             <!-- <div class="bg-red-600 h-2"></div> -->
 
@@ -102,7 +104,7 @@
           </div>
           <hr
             class="border-accent-600 transform transition-all duration-1000"
-            :class="loaded && !scrollY ? 'translate-x-0' : 'translate-x-full'"
+            :class="loaded && !scrollY ? 'translate-x-0' : 'translate-x-[200%]'"
           />
         </div>
       </div>
