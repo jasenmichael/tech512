@@ -1,7 +1,10 @@
 <template>
+  <!-- hero container -->
   <div class="h-screen flex flex-col -mt-10">
+    <!-- hero wrapper -->
     <div class="relative text-onBackgroundDark text-9xl font-black">
       <div class="block absolute w-full">
+        <!-- hero image -->
         <div class="relative">
           <img
             class="absolute w-screen h-screen object-cover"
@@ -9,7 +12,7 @@
             alt=""
           />
         </div>
-        <!-- overlay -->
+        <!-- hero image overlay -->
         <div
           class="
             h-screen
@@ -22,12 +25,14 @@
             from-primary
             to-transparent
           "
-        ></div>
+        />
         <!-- hero content -->
-        <div class="flex flex-row items-center pt-10 transition-all z-50">
-          <div class="relative flex flex-col h-screen pt-20 ml-6">
+        <div class="flex flex-row items-center transition-all z-50">
+          <div
+            class="relative flex flex-col justify-center h-screen pt-20 ml-6"
+          >
             <!-- tech -->
-            <div class="hero-bg-text -mb-20">TECH</div>
+            <div class="hero-bg-text -mb-24">TECH</div>
             <!-- hero heading -->
             <div
               class="
@@ -37,6 +42,8 @@
                 text-primary-100 text-9xl
                 z-10
                 leading-none
+                ml-[55px]
+                text-8xl
               "
             >
               Lightning
@@ -46,7 +53,7 @@
               <br />
               web sites.
               <!-- hero sub-heading -->
-              <div class="text-4xl ml-10 text-accent-600">
+              <div class="text-4xl text-accent-600">
                 We engage and drive traffic to meet your true potential.
               </div>
             </div>
