@@ -1,12 +1,12 @@
 <template>
   <div class="bg-backgroundLight">
     <Hero />
-    <Intro />
-    <Services />
+    <Intro id="intro" />
+    <Services id="services" />
     <CtaHomeOne />
     <!-- portfolio -->
     <!-- team -->
-    <CtaHomeTwo />
+    <CtaHomeTwo id="contact" />
 
     <div class="relative h-96">
       <img

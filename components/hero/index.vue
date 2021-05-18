@@ -62,7 +62,7 @@
             bg-transparent
             w-full
             h-22
-            opacity-50
+            opacity-80
             items-center
             top-0
             mb-10
@@ -98,9 +98,15 @@
           >
             <!-- <div class="bg-red-600 h-2"></div> -->
 
-            <button class="hero-nav">about</button>
-            <button class="hero-nav">services</button>
-            <button class="hero-nav">contact</button>
+            <button class="hero-nav">
+              <a v-scroll-to="'#intro'" href="#"> about </a>
+            </button>
+            <button class="hero-nav">
+              <a v-scroll-to="'#services'" href="#"> services </a>
+            </button>
+            <button class="hero-nav">
+              <a v-scroll-to="'#contact'" href="#"> contact </a>
+            </button>
           </div>
           <hr
             class="border-accent-600 transform transition-all duration-1000"
