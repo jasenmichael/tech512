@@ -17,12 +17,15 @@ useSeoMeta({
 </script>
 
 <template>
-  <article v-if="article" class="copy px-8 py-16">
-    <p>
-      <NuxtLink to="/articles">
-        Articles
-      </NuxtLink>
-    </p>
-    <ContentRenderer :value="article" />
-  </article>
+  <div v-if="article">
+    <SiteHero :title="article.title || ''" :description="article.description || ''" />
+    <article class="copy px-8 py-16">
+      <p>
+        <NuxtLink to="/articles">
+          Articles
+        </NuxtLink>
+      </p>
+      <ContentRenderer :value="article" />
+    </article>
+  </div>
 </template>

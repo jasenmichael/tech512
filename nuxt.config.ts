@@ -26,7 +26,7 @@ export default defineNuxtConfig({
       htmlAttrs: { lang: 'en' },
       title: 'TECH 512',
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico?v=3' },
       ],
     },
   },

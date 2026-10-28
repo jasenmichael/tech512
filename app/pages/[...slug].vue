@@ -16,7 +16,10 @@ useSeoMeta({
 </script>
 
 <template>
-  <article v-if="page" class="copy px-8 py-16">
-    <ContentRenderer :value="page" />
-  </article>
+  <div v-if="page">
+    <SiteHero :title="page.title || ''" :description="page.description || ''" />
+    <article class="copy px-8 py-16">
+      <ContentRenderer :value="page" />
+    </article>
+  </div>
 </template>

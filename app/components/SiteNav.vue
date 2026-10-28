@@ -1,9 +1,27 @@
 <script setup lang="ts">
 const route = useRoute()
-const { loaded, scrolled, menuOpen, scrollToId } = usePageScroll()
+const { loaded, scrolled, menuOpen, scrollToId, scrollY } = usePageScroll()
 const isHome = computed(() => route.path === '/')
-const barOn = computed(() => !isHome.value || scrolled.value)
-const heroNavOn = computed(() => isHome.value && loaded.value && !scrolled.value)
+const barOn = computed(() => scrolled.value)
+const heroNavOn = computed(() => loaded.value && !scrolled.value)
+const narrow = ref(false)
+let mq: MediaQueryList | undefined
+
+function syncNarrow() {
+  narrow.value = mq?.matches ?? false
+  if (!narrow.value && !barOn.value)
+    menuOpen.value = false
+}
+
+onMounted(() => {
+  mq = window.matchMedia('(max-width: 767px)')
+  syncNarrow()
+  mq.addEventListener('change', syncNarrow)
+})
+
+onUnmounted(() => mq?.removeEventListener('change', syncNarrow))
+
+const barShown = computed(() => barOn.value || narrow.value)
 
 const links = [
   { id: 'intro', label: 'about' },
@@ -26,6 +44,9 @@ watch(barOn, (on) => {
 
 watch(() => route.path, () => {
   menuOpen.value = false
+  nextTick(() => {
+    scrollY.value = window.scrollY
+  })
 })
 
 function onHeroClick(event: MouseEvent, id: string) {
@@ -40,38 +61,38 @@ function onHeroClick(event: MouseEvent, id: string) {
   <header class="sticky top-0 z-50">
     <div
       class="relative transition-all duration-700 ease-out"
-      :class="barOn ? 'opacity-100 bg-black' : 'opacity-0 bg-transparent pointer-events-none'"
+      :class="barShown ? 'opacity-100 bg-black' : 'opacity-0 bg-transparent pointer-events-none max-md:opacity-100 max-md:bg-black max-md:pointer-events-auto'"
     >
       <div
         class="text-transparent z-30 h-10 shadow bg-clip-content bg-gradient-to-r from-secondary via-secondary to-primary"
-        :class="barOn ? 'opacity-50' : 'opacity-0'"
+        :class="barShown ? 'opacity-50' : 'opacity-0 max-md:opacity-50'"
       />
       <NuxtLink
         to="/"
-        class="w-auto absolute h-10 flex items-center left-10 -mt-2 font-black text-2xl"
+        class="w-auto absolute h-10 flex items-center left-4 md:left-10 -mt-2 font-black text-2xl"
         aria-label="TECH 512 home"
       >
         <img src="/logo1.png" class="h-20 w-auto rounded-md" alt="TECH 512">
       </NuxtLink>
       <div
-        class="z-50 absolute right-10 -mt-6"
-        :class="barOn ? 'pointer-events-auto' : 'pointer-events-none'"
+        class="z-50 absolute right-4 md:right-10 -mt-6"
+        :class="barShown ? 'pointer-events-auto' : 'pointer-events-none max-md:pointer-events-auto'"
       >
         <button
           type="button"
           class="bg-accent-600 text-onAccent w-12 h-12 text-center border border-secondary flex flex-col items-center rounded-full font-black text-xl"
-          :aria-expanded="barOn ? menuOpen : undefined"
-          :aria-label="barOn ? 'Menu' : undefined"
-          :aria-hidden="barOn ? undefined : true"
-          :tabindex="barOn ? 0 : -1"
-          @click="barOn && (menuOpen = !menuOpen)"
+          :aria-expanded="barShown ? menuOpen : undefined"
+          :aria-label="barShown ? 'Menu' : undefined"
+          :aria-hidden="barShown ? undefined : true"
+          :tabindex="barShown ? 0 : -1"
+          @click="barShown && (menuOpen = !menuOpen)"
         >
           <span class="leading-none text-2xl font-black -mt-1">_</span>
           <span class="leading-none text-2xl font-black -mt-4">_</span>
           <span class="leading-none text-2xl font-black -mt-4">_</span>
         </button>
         <nav
-          v-if="barOn && menuOpen"
+          v-if="barShown && menuOpen"
           class="absolute right-0 top-14 min-w-56 bg-primary text-onPrimary border border-accent-800 py-2"
           aria-label="Menu"
         >
@@ -86,8 +107,7 @@ function onHeroClick(event: MouseEvent, id: string) {
     </div>
 
     <div
-      v-if="isHome"
-      class="overflow-x-hidden absolute bg-transparent w-full items-center top-0 text-4xl transition-all ease-in-out duration-700 z-40"
+      class="hidden md:block overflow-x-hidden absolute bg-transparent w-full items-center top-0 text-4xl transition-all ease-in-out duration-700 z-40"
       :class="scrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'"
     >
       <hr
