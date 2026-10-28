@@ -3,8 +3,6 @@ title: Websites
 description: Public websites from TECH 512, with marketing structure and on-page SEO included.
 ---
 
-# Websites
-
 A website is the public site.
 
 ## What the build includes

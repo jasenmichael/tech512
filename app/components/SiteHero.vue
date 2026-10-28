@@ -6,10 +6,9 @@ const props = defineProps<{
 
 const parts = computed(() => {
   const [before, after] = props.title.split(' Built ')
-  return {
-    before: before || props.title,
-    after: after?.replace(/\.$/, '') || '',
-  }
+  if (!after)
+    return { before: props.title, after: '' }
+  return { before, after: after.replace(/\.$/, '') }
 })
 </script>
 
@@ -27,11 +26,16 @@ const parts = computed(() => {
           <div class="hero-bg-text -mb-24 hidden md:block">
             TECH
           </div>
-          <h1 class="relative z-10 text-primary-100 text-[1.15em] leading-tight md:ml-[55px] md:text-[0.75em] md:leading-none">
+          <h1
+            class="relative z-10 text-primary-100 text-[1.15em] leading-tight md:ml-[55px] md:leading-none"
+            :class="parts.after ? 'md:text-[0.75em]' : 'md:text-[0.45em]'"
+          >
             {{ parts.before }}
-            <span class="italic text-accent-600">Built</span>
-            <br class="hidden md:block">
-            {{ ' ' + parts.after }}.
+            <template v-if="parts.after">
+              <span class="italic text-accent-600">Built</span>
+              <br class="hidden md:block">
+              {{ ' ' + parts.after }}.
+            </template>
             <span class="mt-3 block text-[0.62em] font-normal leading-snug text-accent-600 md:mt-0 md:text-[0.375em] md:font-black md:leading-normal">
               {{ description }}
             </span>

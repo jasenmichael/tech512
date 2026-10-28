@@ -4,8 +4,6 @@ description: A TECH 512 website includes the marketing structure and the on-page
 date: 2026-10-27
 ---
 
-# What a website includes
-
 These are the pieces of a TECH 512 website, in the order they are built. The offer is on [Websites](/websites).
 
 ## Page structure

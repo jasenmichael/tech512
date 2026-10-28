@@ -1,9 +1,9 @@
 <script setup lang="ts">
 const route = useRoute()
-const { loaded, scrolled, menuOpen, scrollToId } = usePageScroll()
+const { loaded, scrolled, menuOpen, scrollToId, scrollY } = usePageScroll()
 const isHome = computed(() => route.path === '/')
-const barOn = computed(() => !isHome.value || scrolled.value)
-const heroNavOn = computed(() => isHome.value && loaded.value && !scrolled.value)
+const barOn = computed(() => scrolled.value)
+const heroNavOn = computed(() => loaded.value && !scrolled.value)
 const narrow = ref(false)
 let mq: MediaQueryList | undefined
 
@@ -44,6 +44,9 @@ watch(barOn, (on) => {
 
 watch(() => route.path, () => {
   menuOpen.value = false
+  nextTick(() => {
+    scrollY.value = window.scrollY
+  })
 })
 
 function onHeroClick(event: MouseEvent, id: string) {
@@ -104,7 +107,6 @@ function onHeroClick(event: MouseEvent, id: string) {
     </div>
 
     <div
-      v-if="isHome"
       class="hidden md:block overflow-x-hidden absolute bg-transparent w-full items-center top-0 text-4xl transition-all ease-in-out duration-700 z-40"
       :class="scrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'"
     >

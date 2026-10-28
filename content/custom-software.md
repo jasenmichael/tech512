@@ -3,8 +3,6 @@ title: Custom software
 description: Applications built for one customer, including web apps, automation, and a native app when the project needs one.
 ---
 
-# Custom software
-
 Custom software is an application built for one customer, around the way that customer works.
 
 ## What the engagement includes
