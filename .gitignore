@@ -25,3 +25,6 @@ logs
 !.env.example
 
 tech512-old
+graphify-output
+.vscode
+.cursor
