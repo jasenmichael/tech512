@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "24"
+
+[context.deploy-preview.environment]
+  NUXT_SITE_ENV = "staging"
