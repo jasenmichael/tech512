@@ -7,7 +7,13 @@ body {
 }
 
 .hero-scale {
-  font-size: clamp(5rem, 8.5vw, 8rem);
+  font-size: clamp(1.75rem, 7vw, 2.25rem);
+}
+
+@media (min-width: 768px) {
+  .hero-scale {
+    font-size: clamp(5rem, 8.5vw, 8rem);
+  }
 }
 
 .hero-bg-text {
