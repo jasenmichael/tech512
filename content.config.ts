@@ -11,6 +11,7 @@ export default defineContentConfig({
         exclude: ['articles/**'],
       },
       schema: z.object({
+        seoTitle: z.string().optional(),
         sitemap: defineSitemapSchema(),
       }),
     }),

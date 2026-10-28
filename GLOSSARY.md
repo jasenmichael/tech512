@@ -16,6 +16,10 @@ _Avoid_: account
 A public site. Marketing and SEO are part of a Website.
 _Avoid_: SEO retainer, marketing agency
 
+**Site findability**:
+How searchers find the TECH 512 website.
+_Avoid_: on-page SEO inside a customer Website, an SEO offer
+
 **Custom software**:
 An application built for one Customer, including web applications, custom apps, automation, and a native app when the project needs one.
 _Avoid_: IT service, repair

@@ -6,6 +6,14 @@ const organization = {
   '@type': 'Organization',
   'name': 'TECH 512',
   'url': 'https://tech512.com',
+  'logo': 'https://tech512.com/logo1.png',
+  'foundingDate': '2007',
+  'address': {
+    '@type': 'PostalAddress',
+    'addressLocality': 'Elgin',
+    'addressRegion': 'TX',
+    'addressCountry': 'US',
+  },
   // 'telephone': '+15129067113',
 }
 

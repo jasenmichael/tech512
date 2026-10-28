@@ -1,6 +1,7 @@
 ---
 title: Software Built Around the Way You Work.
-description: Websites and custom software. Marketing and SEO included.
+seoTitle: Websites and custom software in Elgin, Texas
+description: TECH 512 builds websites and custom software from Elgin, Texas, for customers anywhere.
 ---
 
 ::page-section{id="intro" tone="light"}
