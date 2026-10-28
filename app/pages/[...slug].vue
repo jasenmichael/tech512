@@ -17,7 +17,7 @@ useSeoMeta({
 
 <template>
   <div v-if="page">
-    <SiteHero :title="page.title || ''" :description="page.description || ''" />
+    <SiteHero />
     <article class="copy px-8 py-16">
       <ContentRenderer :value="page" />
     </article>
