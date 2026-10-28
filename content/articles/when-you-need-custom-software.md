@@ -4,6 +4,8 @@ description: Custom software is the application built for one customer, includin
 date: 2026-10-28
 ---
 
+# When you need custom software
+
 You need custom software when a packaged tool cannot follow your work. The offer is on [Custom software](/custom-software).
 
 ## A workflow you do not control

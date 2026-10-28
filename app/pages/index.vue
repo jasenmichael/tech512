@@ -8,17 +8,14 @@ if (!home.value) {
 }
 
 useSeoMeta({
-  title: home.value.title,
+  title: home.value.seoTitle || home.value.title,
   description: home.value.description,
 })
 </script>
 
 <template>
   <div v-if="home">
-    <SiteHero
-      :title="home.title || ''"
-      :description="home.description || ''"
-    />
+    <SiteHero />
     <ContentRenderer :value="home" />
   </div>
 </template>

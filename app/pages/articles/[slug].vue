@@ -18,7 +18,7 @@ useSeoMeta({
 
 <template>
   <div v-if="article">
-    <SiteHero :title="article.title || ''" :description="article.description || ''" />
+    <SiteHero />
     <article class="copy px-8 py-16">
       <p>
         <NuxtLink to="/articles">

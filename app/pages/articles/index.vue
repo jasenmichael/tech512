@@ -11,12 +11,10 @@ useSeoMeta({
 
 <template>
   <div>
-    <SiteHero
-      title="Articles"
-      description="Notes from TECH 512 on websites, marketing, and custom software."
-    />
+    <SiteHero />
     <article class="copy px-8 py-16">
-    <ul v-if="articles?.length">
+      <h1>Articles</h1>
+      <ul v-if="articles?.length">
       <li v-for="article in articles" :key="article.path">
         <NuxtLink :to="article.path">
           {{ article.title }}

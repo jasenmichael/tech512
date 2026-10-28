@@ -1,7 +1,9 @@
 ---
-title: About
+title: A software practice in Elgin, Texas
 description: TECH 512 is a software practice based in Elgin, Texas, building websites and custom software since 2007.
 ---
+
+# About
 
 TECH 512 has built software since 2007. The practice is based in Elgin, Texas, and works with people and businesses anywhere.
 
